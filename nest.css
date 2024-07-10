@@ -1,0 +1,56 @@
+body {margin:0;
+  background-color: #444;
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color: #34F30F;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 14px #6a6565;
+    ;
+  }
+  
+  .navbar li {
+    float: right;
+    display: block;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    padding: 14px 12px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    transition: color 1s;
+  }
+  
+  .navbar li:hover {
+    background: #ddd;
+    color: black;
+    cursor: pointer;
+  }
+  .brand-name {
+      font-size: 24px;
+      font-weight: bold;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      cursor: pointer;
+      color: #000;
+      /* width: 220px; */
+      /* height: 30px; */
+      margin-top: 20px ;
+      
+      background-color: blue;
+  }
+  
+  .main {
+    padding: 16px;
+    margin-top: 60px;
+    height: 1500px;
+    color: #ddd;
+  }
+  a{
+    text-decoration: none;
+    margin-top: 20px;
+      
+  }
