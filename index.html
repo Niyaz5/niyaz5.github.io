@@ -3,123 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>niyaz</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
+    <title>My Hacker Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">    <style>
     body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    background-color: #101010;
+    color: #00FF00;
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
     padding: 0;
-    background-color: #444;
-    color: #ddd;
-}
-
-header {
-    background-color: #40bd27;
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 70px;
+    width: 80%;
+    background-color: #000000;
+    border: 2px solid #00FF00;
+    padding: 20px;
+    box-shadow: 0 0 30px #00FF00;
+    margin-top: auto;
 }
 
-.brand-name {
-    font-size: 20px;
-    font-weight: bold;
-    color: #000;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-   
-    
-    
-    padding: 8px 5px;
-    transition: background-color 0.3s;
-    margin-left: -60px;
-    
+header {
+    text-align: center;
+    margin-bottom: 30px;
 }
-.brand-name:hover{
-	background-color: #4e4e4e4b;
-    border-radius: 4px;
-    }
-a{
-	text-decoration: none;
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px #00FF00;
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
     padding: 0;
     display: flex;
-    margin-right: -40px;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 nav ul li {
-    margin-left: 10px;
-    color: #444;
-    font-weight: bold;
-    font-family:Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    text-decoration: none;
     color: #000;
-    padding: 8px 12px;
-    transition: background-color 0.3s;
+    background-color: #00FF00;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border: 2px solid #00FF00;
+    box-shadow: 2px 2px #00FF00;
 }
 
 nav ul li a:hover {
-    background-color: #4e4e4e4b;
-    border-radius: 4px;
+    background-color: #000;
+    color: #00FF00;
+    border: 2px solid #00FF00;
 }
 
 main {
-    padding: 20px;
     text-align: center;
 }
 
-footer {
-    background-color: #006400;
-    text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+section {
+    margin-bottom: 30px;
 }
-h1{
-	margin-top: 60px;
-  }
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+p, ul {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+a{
+    color: #00FF00;
+}
+i{
+    color: #00FF00;
+    background-color: transparent;
+    font-size: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
 
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-        <a href="https://niyaz5.github.io">
-            <div class="brand-name">MUHAMMED NIYAZ</div></a>
+    <div class="container">
+        <header>
+            <h1>Muhammed Niyaz</h1>
             <nav>
-                <ul class="menu">
-                    <li><a href="https://niyaz5.github.io">Home</a></li>
+                <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Projects</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-        </div>
-    </header>
-    <main>
-        <section id="home">
-            <h1>MUHAMMED NIYAZ</h1>
-            <p>programmer and student to know more about me <a href="https://github.com/Niyaz5" style="text-decoration: none; color: #ddd;">CLICK!</a></p>
-        </section>
-     
-    </main>
-    
+        </header>
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Welcome to my personal portfolio. I am a degree student with a deep passion for computer technology and ethical hacking. My journey into the world of hacking is driven by a love for contributing to projects and a commitment to improving my skills.
+
+                    I have worked on various projects, including an IP tracker, a password strength and generator tool, and an app designed specifically for ethical hackers. These experiences have allowed me to develop and refine my abilities in multiple programming languages, such as Bash, C, Java, and Python.
+                    
+                    Although I do not hold any formal certifications, my enthusiasm for hacking and cybersecurity is fueled by a genuine enjoyment of the practice. I stay regularly updated with the latest advancements in technology to ensure I am always at the forefront of the field.
+                    
+                    My primary motivation is to enhance my abilities and use my skills to secure people from potential attacks. I believe in the importance of cybersecurity and aim to make the digital world a safer place through my efforts.
+                    
+                    Explore my portfolio to see some of the projects I have worked on, and feel free to reach out if you have any questions or opportunities for collaboration.</p>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li><strong>IPTracker:</strong>An tool to track ip adddress show info from ip address </li>
+                    <li><strong>Password generator:</strong> Password generate and check strenght and temporary password store </li>
+                    <li><strong>HACK3R:</strong> An app for ehtical hackers.<strong>coming soooon!</strong></li>
+                </ul>
+            </section>
+            
+            <section id="contact">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:youremail@example.com">muhammedniyaz9388.com</a></p>
+                <a href="https://github.com/Niyaz5">
+                <i class="fa-brands fa-github"></i></a>
+                <a href="https://t.me/niyyaz">
+                <i class="fa-brands fa-telegram"></i></a>
+
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Muhammed Niyaz</p>
+        </footer>
+    </div>
 </body>
 </html>
