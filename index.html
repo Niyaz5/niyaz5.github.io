@@ -4,128 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Hacker Portfolio</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">    <style>
-    body {
-    background-color: #101010;
-    color: #00FF00;
-    font-family: 'Courier New', Courier, monospace;
-    margin: auto;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            background-color: #101010;
+            color: #00FF00;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-.container {
-    width: 80%;
-    background-color: #000000;
-    border: 2px solid #00FF00;
-    padding: 20px;
-    box-shadow: 0 0 20px #00FF00;
-    margin-top: auto;
-}
+        .container {
+            width: 80%;
+            background-color: #000000;
+            border: 2px solid #00FF00;
+            padding: 20px;
+            box-shadow: 0 0 20px #00FF00;
+            margin-top: 20px;
+        }
 
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
 
-h1 {
-    font-size: 3em;
-    margin: 0;
-    text-shadow: 2px 2px #00FF00;
-}
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px #00FF00;
+        }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
 
-nav ul li {
-    margin: 0 15px;
-}
+        nav ul li {
+            margin: 0 15px;
+        }
 
-nav ul li a {
-    color: #000;
-    background-color: #00FF00;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.2em;
-    border: 2px solid #00FF00;
-    box-shadow: 2px 2px #00FF00;
-}
+        nav ul li a {
+            color: #000;
+            background-color: #00FF00;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border: 2px solid #00FF00;
+            box-shadow: 2px 2px #00FF00;
+        }
 
-nav ul li a:hover {
-    background-color: #000;
-    color: #00FF00;
-    border: 2px solid #00FF00;
-}
+        nav ul li a:hover {
+            background-color: #000;
+            color: #00FF00;
+            border: 2px solid #00FF00;
+        }
 
-main {
-    text-align: center;
-}
+        main {
+            text-align: center;
+        }
 
-section {
-    margin-bottom: 30px;
-}
+        section {
+            margin-bottom: 30px;
+        }
 
-h2 {
-    font-size: 2em;
-    margin-bottom: 15px;
-}
+        h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
 
-p, ul {
-    font-size: 1.2em;
-    line-height: 1.5;
-}
+        p, ul {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
+        ul {
+            list-style: none;
+            padding: 0;
+        }
 
-ul li {
-    margin: 10px 0;
-}
+        ul li {
+            margin: 10px 0;
+        }
 
-footer {
-    text-align: center;
-    margin-top: 30px;
-}
+        footer {
+            text-align: center;
+            margin-top: 30px;
+        }
 
-a{
-    color: #00FF00;
-}
-i{
-    color: #00FF00;
-    background-color: transparent;
-    font-size: 25px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: color  .3s ease-in-out;
-}
-i:hover{
-    color: #ffffffec;
-}
+        a {
+            color: #00FF00;
+        }
 
-@media (max-width: 560px){
-    
-    nav ul li a{
-        padding: 5px 10px;
-        font-size: 1.2em;
-        margin-left: -10px;
-    }
-    h1{
-        font-size: 2.5em;
-    }
-}
-    
+        i {
+            color: #00FF00;
+            background-color: transparent;
+            font-size: 25px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: color 0.3s ease-in-out;
+        }
 
+        i:hover {
+            color: #ffffffec;
+        }
 
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            nav ul li a {
+                padding: 8px 16px;
+                font-size: 1em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            p, ul {
+                font-size: 1em;
+            }
+
+            i {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 412px) {
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            nav ul {
+                /* flex-direction: column; */
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 10px;
+            }
+
+            nav ul li a {
+                padding: 5px 10px;
+                font-size: 0.9em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p, ul {
+                font-size: 0.9em;
+            }
+
+            i {
+                font-size: 18px;
+            }
+            @media (max-width:298px){
+                h1{
+                    font-size: 1.9em;
+                }
+            }
+        }
     </style>
 </head>
 <body>
@@ -157,24 +215,25 @@ i:hover{
                 <h2>Projects</h2>
                 <ul>
                     <a href="https://niyaz5.github.io/iptracker" style="text-decoration: none;">
-                    <li><strong>IPTracker</a>:</strong>An tool to track ip adddress show info from ip address </li>
+                    <li><strong>IPTracker:</strong> An tool to track IP addresses and show information about them.</li>
+                    </a>
                     <a href="https://niyaz5.github.io/password-generator" style="text-decoration: none;">
-                    <li><strong>Password generator</a>:</strong> Password generate and check strenght and temporary password store </li>
-                    <a href="https://niyaz5.github.io/test"  style="text-decoration: none;">
-                    <li><strong>HACK3R</a>:</strong> An app for ehtical hackers.<strong>coming soooon!</strong></li>
+                    <li><strong>Password Generator:</strong> A tool to generate and check the strength of passwords and temporarily store them.</li>
+                    </a>
+                    <a href="https://niyaz5.github.io/test" style="text-decoration: none;">
+                    <li><strong>HACK3R:</strong> An app for ethical hackers. <strong>Coming soon!</strong></li>
+                    </a>
                 </ul>
             </section>
-            <section>
-            
-        </section>   
             <section id="contact">
                 <h2>Contact</h2>
-                <p>Email: <a href="mailto:muhammedniyaz9388@gmail.com">muhammedniyaz9388.com</a></p>
+                <p>Email: <a href="mailto:muhammedniyaz9388@gmail.com">muhammedniyaz9388@gmail.com</a></p>
                 <a href="https://github.com/Niyaz5">
-                <i class="fa-brands fa-github"></i></a>
+                    <i class="fa-brands fa-github"></i>
+                </a>
                 <a href="https://t.me/niyyaz">
-                <i class="fa-brands fa-telegram"></i></a>
-
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
             </section>
         </main>
         <footer>
