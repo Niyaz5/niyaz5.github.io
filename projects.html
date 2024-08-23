@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Header Styles */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1e1e1e;
+            color: #dcdcdc;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #444;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #0f0;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .project-box {
+            background-color: #222;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 300px; /* Fixed height to ensure consistent spacing */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+        }
+
+        .project-box h2 {
+            font-size: 1.5em;
+            color: #0f0;
+        }
+
+        .project-box p {
+            font-size: 1em;
+            margin-bottom: 20px;
+            flex: 1; /* Ensures the paragraph takes available space */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #000;
+            background-color: #0f0;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            align-self: flex-end; /* Align button to the bottom */
+        }
+
+        .button:hover {
+            background-color: #0d0;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #dcdcdc;
+            text-align: center;
+            padding: 10px;
+            border-top: 2px solid #444;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .project-box {
+                width: 100%;
+                max-width: 600px;
+                height: auto; /* Allow height to be dynamic on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Projects</h1>
+    </header>
+    <main>
+        <section class="projects">
+            <div class="project-box">
+                <h2>IPtracker</h2>
+                <p>An tool to check basic info from providing IP address....</p>
+                <a href="https://niyaz5.github.io/iptracker" class="button">View Project</a>
+            </div>
+            <div class="project-box">
+                <h2>Password-generator</h2>
+                <p>Password strength check and password generating tool that also stores passwords securely by using IP. Completely secure.</p>
+                <a href="https://niyaz5.github.io/password-generator" class="button">View Project</a>
+            </div>
+            <div class="project-box">
+                <h2>HACK3R</h2>
+                <p>An app for learning ethical hacking. <strong>Coming soon!</strong></p>
+                <a href="#" class="button">View Project</a>
+            </div>
+            <div class="project-box">
+                <h2>My Portfolio</h2>
+                <p>My personal portfolio site.</p>
+                <a href="https://niyaz5.github.io/" class="button">View Project</a>
+            </div>
+            <div class="project-box">
+                <h2>Encryption Tool</h2>
+                <p>A text encryption tool with password protection and decryption capabilities.</p>
+                <a href="https://niyaz5.github.io/encrypt" class="button">View Project</a>
+            </div>
+            <div class="project-box">
+                <h2>Typing Game</h2>
+                <p>A text-based game to increase typing speed.</p>
+                <a href="https://niyaz5.github.io/typegame" class="button">View Project</a>
+            </div>
+            <div class="project-box">
+                <h2>Leafpad</h2>
+                <p>An online leafpad for writing and downloading text files with specified names and extensions.</p>
+                <a href="https://niyaz5.github.io/leafpad" class="button">View Project</a>
+            </div>
+            <div class="project-box">
+                <h2>Currency converter</h2>
+                <p>Currency and crypto converter...</p>
+                <a href="https://niyaz5.github.io/convert" class="button">View Project</a>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Muhammed Niyaz</p>
+    </footer>
+</body>
+</html>
