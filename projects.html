@@ -48,11 +48,11 @@
             border: 1px solid #444;
             border-radius: 8px;
             padding: 20px;
-            width: 300px;
+            width: 280px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 300px; /* Fixed height to ensure consistent spacing */
+            height: 250px; /* Fixed height to ensure consistent spacing */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -72,7 +72,7 @@
             margin-bottom: 20px;
             flex: 1; /* Ensures the paragraph takes available space */
         }
-
+       
         .button {
             display: inline-block;
             padding: 10px 20px;
@@ -96,6 +96,15 @@
             padding: 10px;
             border-top: 2px solid #444;
         }
+        button{
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 18px;
+            padding: 5px  8px;
+            color: #444;
+            background-color: #0f0;
+        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -114,6 +123,8 @@
 </head>
 <body>
     <header>
+        <a href="/">
+    <button><-</button></a>
         <h1>Projects</h1>
     </header>
     <main>
@@ -125,7 +136,7 @@
             </div>
             <div class="project-box">
                 <h2>Password-generator</h2>
-                <p>Password strength check and password generating tool that also stores passwords securely by using IP. Completely secure.</p>
+                <p>Password strength check and password generating tool, Completely secure.</p>
                 <a href="https://niyaz5.github.io/password-generator" class="button">View Project</a>
             </div>
             <div class="project-box">
@@ -154,9 +165,9 @@
                 <a href="https://niyaz5.github.io/leafpad" class="button">View Project</a>
             </div>
             <div class="project-box">
-                <h2>Currency converter</h2>
-                <p>Currency and crypto converter...</p>
-                <a href="https://niyaz5.github.io/convert" class="button">View Project</a>
+                <h2>Online chating app</h2>
+                <p>Caht online and make friends!</p>
+                <a href="https://webchatapp-8uhm.onrender.com/" class="button">View Project</a>
             </div>
             
         </section>
