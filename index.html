@@ -4,31 +4,27 @@
     <meta name="google-adsense-account" content="ca-pub-3124499791066947">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>niyaz</title>
+    <title>Muhammed Niyaz | Hacker Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="image/png" href="theghost.png">
-
-   
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #101010;
+            background-color: #0f1117;
             color: #00FF00;
-            font-family: ui-monospace;
+            font-family: 'Share Tech Mono', monospace;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
         }
 
         .container {
-            width: 80%;
-            background-color: #44444444;
-            border: 2px solid #00FF00;
+            max-width: 960px;
+            margin: auto;
             padding: 20px;
-            box-shadow: 0 0 20px #00FF00;
-            
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #00FF00;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00FF0077;
         }
 
         header {
@@ -37,81 +33,83 @@
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
+            color: #00FF00;
             margin: 0;
-            /* text-shadow: 2px 2px #00FF00; */
         }
 
         nav ul {
             list-style: none;
             padding: 0;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 5px 10px;
         }
 
         nav ul li a {
-            color: #000;
             background-color: #00FF00;
+            color: #0f1117;
             padding: 10px 20px;
+            border-radius: 6px;
             text-decoration: none;
-            font-size: 1.2em;
-            border: 2px solid #00FF00;
-            box-shadow: 2px 2px #00FF00;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
         nav ul li a:hover {
-            background-color: #000;
-            color: #00FF00;
+            background: transparent;
             border: 2px solid #00FF00;
+            color: #00FF00;
         }
 
-        main {
-            text-align: center;
-        }
-
-        section {
+        main section {
             margin-bottom: 30px;
         }
 
         h2 {
-            font-size: 2em;
-            margin-bottom: 15px;
+            font-size: 1.8em;
+            color: #60a5fa;
         }
 
-        p, ul {
-            font-size: 1.2em;
-            line-height: 1.5;
+        p, li {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #eaeaea;
         }
 
         ul {
-            list-style: none;
-            padding: 0;
+            padding-left: 0;
         }
 
         ul li {
-            margin: 10px 0;
+            list-style: none;
+            margin-bottom: 12px;
+        }
+
+        a {
+            color: #00FF00;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: white;
         }
 
         footer {
             text-align: center;
             margin-top: 30px;
-        }
-
-        a {
-            color: #00FF00;
+            color: #6ee7b7;
         }
 
         i {
+            font-size: 24px;
+            margin: 0 8px;
             color: #00FF00;
-            background-color: transparent;
-            font-size: 25px;
-            margin-left: 10px;
-            cursor: pointer;
             transition: color 0.3s ease-in-out;
         }
 
@@ -120,25 +118,25 @@
         }
 
         @media (max-width: 600px) {
-            .container {
-                width: 90%;
-                padding: 15px;
+            h1 {
+                font-size: 2em;
             }
 
-            h1 {
-                font-size: 2.5em;
+            nav ul {
+                flex-direction: column;
+                align-items: center;
             }
 
             nav ul li a {
-                padding: 8px 16px;
+                padding: 8px 14px;
                 font-size: 1em;
             }
 
             h2 {
-                font-size: 1.8em;
+                font-size: 1.5em;
             }
 
-            p, ul {
+            p, li {
                 font-size: 1em;
             }
 
@@ -146,59 +144,14 @@
                 font-size: 20px;
             }
         }
-
-        @media (max-width: 600px) {
-            .container {
-                width: 95%;
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            nav ul {
-                /* flex-direction: column; */
-                align-items: center;
-            }
-
-            nav ul li {
-                margin: 10px 10px;
-            }
-
-            nav ul li a {
-                padding: 5px 10px;
-                font-size: 0.9em;
-            }
-
-            h2 {
-                font-size: 1.5em;
-            }
-
-            p, ul {
-                font-size: 0.9em;
-            }
-
-            i {
-                font-size: 18px;
-            }
-            @media (max-width:600px){
-                h1{
-                    font-size: 2em;
-                }
-            }
-        }
-        #emaiId:hover{
-            color: #ffffffec;
-            transition: color .3s ease-in-out;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <a href="https://niyaz5.github.io" style="text-decoration: none;">
-            <h1>Muhammed Niyaz</h1></a>
+                <h1>🖧 Muhammed Niyaz</h1>
+            </a>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
@@ -210,45 +163,28 @@
         <main>
             <section id="about">
                 <h2>About Me</h2>
-                <p>Welcome to my personal portfolio. I am a degree student with a deep passion for computer technology and ethical hacking. My journey into the world of hacking is driven by a love for contributing to projects and a commitment to improving my skills.
-
-                    I have worked on various projects, including an IP tracker, and password strength and generator tool and <strong>MORE!</strong> These experiences have allowed me to develop and refine my abilities in multiple programming languages, such as Bash, C and Python.
-                    
-                    Although I do not hold any formal certifications, my enthusiasm for hacking and cybersecurity is fueled by a genuine enjoyment of the practice. I stay regularly updated with the latest advancements in technology to ensure I am always at the forefront of the field.
-                    
-                    My primary motivation is to enhance my abilities and use my skills to secure people from potential attacks. I believe in the importance of cybersecurity and aim to make the digital world a safer place through my efforts.
-                    
-                    Explore my portfolio to see some of the projects I have worked on, and feel free to reach out if you have any questions or opportunities for collaboration.</p>
+                <p>I am a degree student passionate about ethical hacking and tech. My work includes tools like an IP tracker and password generator, know the languages like Bash, C, and Python. No formal certs yet — but real skill doesn’t always need one. I'm here to learn, hack, build, and defend.</p>
             </section>
+
             <section id="projects">
                 <h2>Projects</h2>
                 <ul>
-                    <a href="https://niyaz5.github.io/iptracker" style="text-decoration: none;">
-                    <li><strong>IPTracker</a>:</strong> An tool to track IP addresses and show information about them.</li>
-                    
-                    <a href="https://niyaz5.github.io/password-generator" style="text-decoration: none;">
-                    <li><strong>Password Generator</a>:</strong> A tool to generate and check the strength of passwords and temporarily store them.</li>
-                    
-                    <a href="https://webchatapp-8uhm.onrender.com/" style="text-decoration: none;">
-                    <li><strong>Online Chat</a>:</strong> An Online Chat website!</li>
-                    
+                    <li><a href="https://niyaz5.github.io/iptracker"><strong>IPTracker</strong></a>: Tool to track IP addresses.</li>
+                    <li><a href="https://niyaz5.github.io/password-generator"><strong>Password Generator</strong></a>: Create and check strength of secure passwords.</li>
+                    <li><a href="https://webchatapp-8uhm.onrender.com/"><strong>Online Chat</strong></a>: Simple real-time chat app.</li>
                 </ul>
-                <a href="/projects.html">
-                <h2 style="font-size: 18px;">More...</a></h2>
+                <a href="/projects.html"><h3>More...</h3></a>
             </section>
+
             <section id="contact">
                 <h2>Contact</h2>
                 <p>Email: <a href="mailto:muhammedniyaz9388@gmail.com" id="emaiId">muhammedniyaz9388@gmail.com</a></p>
-                   
-                <a href="https://github.com/Niyaz5"><i class="fa-brands fa-github"></i></a>
-                <a href="https://t.me/niyyaz">
-                    <i class="fa-brands fa-telegram"></i></a>
-
+                <a href="https://github.com/Niyaz5"><i class="fab fa-github"></i></a>
+                <a href="https://t.me/niyyaz5"><i class="fab fa-telegram"></i></a>
             </section>
-
         </main>
         <footer>
-            <p>&copy; 2024 Muhammed Niyaz</p>
+            <p>&copy; 2025 Muhammed Niyaz | Hacked this page myself.</p>
         </footer>
     </div>
 </body>
