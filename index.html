@@ -1,191 +1,1269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-adsense-account" content="ca-pub-3124499791066947">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammed Niyaz | Hacker Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="icon" type="image/png" href="theghost.png">
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>Muhammed Niyaz | Ethical Hacker & Security Enthusiast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #0f62fe;
+            --primary-dark: #0043ce;
+            --secondary: #6fdc8c;
+            --dark: #161616;
+            --dark-light: #393939;
+            --light: #f4f4f4;
+            --gray: #8d8d8d;
+            --success: #24a148;
+            --warning: #f1c21b;
+            --danger: #fa4d56;
+            --font-main: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --transition: all 0.3s ease;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background-color: #0f1117;
-            color: #00FF00;
-            font-family: 'Share Tech Mono', monospace;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 960px;
-            margin: auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid #00FF00;
-            border-radius: 10px;
-            box-shadow: 0 0 15px #00FF0077;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        h1 {
-            font-size: 2.5em;
-            color: #00FF00;
-            margin: 0;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 15px;
-        }
-
-        nav ul li {
-            margin: 5px 10px;
-        }
-
-        nav ul li a {
-            background-color: #00FF00;
-            color: #0f1117;
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover {
-            background: transparent;
-            border: 2px solid #00FF00;
-            color: #00FF00;
-        }
-
-        main section {
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            font-size: 1.8em;
-            color: #60a5fa;
-        }
-
-        p, li {
-            font-size: 1.1em;
+            font-family: var(--font-main);
+            background-color: var(--dark);
+            color: var(--light);
             line-height: 1.6;
-            color: #eaeaea;
-        }
-
-        ul {
-            padding-left: 0;
-        }
-
-        ul li {
-            list-style: none;
-            margin-bottom: 12px;
+            overflow-x: hidden;
         }
 
         a {
-            color: #00FF00;
             text-decoration: none;
+            color: inherit;
         }
 
-        a:hover {
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-main);
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
             color: white;
         }
 
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            color: #6ee7b7;
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(22, 22, 22, 0.95);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
         }
 
-        i {
-            font-size: 24px;
-            margin: 0 8px;
-            color: #00FF00;
-            transition: color 0.3s ease-in-out;
+        header.scrolled {
+            box-shadow: var(--shadow);
         }
 
-        i:hover {
-            color: #ffffffec;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
         }
 
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em;
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--light);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 0 60px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(15, 98, 254, 0.1) 0%, rgba(22, 22, 22, 0.9) 100%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            word-wrap: break-word;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: var(--gray);
+            max-width: 100%;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
             }
+            40% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-5px) translateX(-50%);
+            }
+        }
 
-            nav ul {
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .skill {
+            background: var(--dark-light);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary) 0%, transparent 70%);
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            background: var(--dark-light);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .project-desc {
+            color: var(--gray);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: rgba(15, 98, 254, 0.2);
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-family: var(--font-mono);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* Resume Section - COMPLETELY REDESIGNED FOR MOBILE */
+        .resume-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .resume-sidebar {
+            background: var(--dark-light);
+            padding: 30px;
+            border-radius: 10px;
+            height: fit-content;
+        }
+
+        .resume-main {
+            background: var(--dark-light);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .resume-section {
+            margin-bottom: 30px;
+        }
+
+        .resume-section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .education-item, .experience-item {
+            margin-bottom: 25px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            flex-wrap: wrap;
+        }
+
+        .item-title {
+            font-weight: 600;
+        }
+
+        .item-subtitle {
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .item-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .item-desc {
+            color: var(--gray);
+        }
+
+        /* Contact Section - REDESIGNED FOR MOBILE */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            padding: 12px 15px;
+            background: var(--dark-light);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            color: var(--light);
+            font-family: var(--font-main);
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-light);
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: var(--dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--gray);
+            font-size: 0.9rem;
+            width: 100%;
+        }
+
+        /* ========== MOBILE RESPONSIVE STYLES ========== */
+        @media (max-width: 992px) {
+            .about-content, .resume-container, .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 80%;
+                height: calc(100vh - 70px);
+                background: var(--dark);
                 flex-direction: column;
                 align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                transition: var(--transition);
+                box-shadow: var(--shadow-lg);
+                z-index: 999;
             }
 
-            nav ul li a {
-                padding: 8px 14px;
-                font-size: 1em;
+            .nav-links.active {
+                right: 0;
             }
 
-            h2 {
-                font-size: 1.5em;
+            .nav-links li {
+                margin: 15px 0;
             }
 
-            p, li {
-                font-size: 1em;
+            .hamburger {
+                display: block;
+                z-index: 1000;
             }
 
-            i {
-                font-size: 20px;
+            /* Mobile Hero Section */
+            .hero {
+                padding: 120px 0 60px;
+                min-height: 90vh;
+                height: auto;
             }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+                line-height: 1.3;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            /* MOBILE RESUME SECTION FIX */
+            .resume-container {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .resume-sidebar, .resume-main {
+                padding: 25px 20px;
+                width: 100%;
+            }
+            
+            .resume-section {
+                margin-bottom: 25px;
+            }
+            
+            .resume-section-title {
+                font-size: 1.2rem;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+                margin-bottom: 20px;
+            }
+            
+            .contact-icon {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+            
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .item-date {
+                margin-top: 5px;
+                font-size: 0.85rem;
+            }
+            
+            .item-title, .item-subtitle, .item-desc {
+                width: 100%;
+            }
+            
+            /* MOBILE CONTACT SECTION FIX */
+            .contact-content {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                margin-top: 40px;
+            }
+            
+            .contact-info {
+                gap: 25px;
+            }
+            
+            .contact-item {
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            .contact-icon {
+                margin-bottom: 0;
+                margin-right: 15px;
+            }
+            
+            .form-group label {
+                font-size: 0.95rem;
+            }
+            
+            .form-control {
+                padding: 14px 12px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            /* Extra Small Devices */
+            .hero {
+                padding: 120px 0 60px;
+                min-height: 85vh;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+            
+            .hero p {
+                font-size: 0.95rem;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+                margin-bottom: 25px;
+            }
+            
+            .resume-sidebar, .resume-main {
+                padding: 20px 15px;
+            }
+            
+            .project-content {
+                padding: 20px;
+            }
+            
+            .project-links {
+                flex-direction: column;
+            }
+            
+            .project-links .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            /* SMALL MOBILE RESUME FIXES */
+            .resume-section-title {
+                font-size: 1.1rem;
+            }
+            
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+            
+            .contact-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            
+            .item-header {
+                flex-direction: column;
+            }
+            
+            .item-date {
+                margin-top: 5px;
+            }
+            
+            /* SMALL MOBILE CONTACT FIXES */
+            .contact-info .contact-item {
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            .contact-info .contact-icon {
+                margin-bottom: 0;
+                margin-right: 15px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            /* Very Small Devices */
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            
+            .hero p {
+                font-size: 0.9rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .skills {
+                gap: 8px;
+            }
+            
+            .skill {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+                background-color: #4c4c4c;
+            }
+            
+            .project-tech {
+                gap: 5px;
+            }
+            
+            .tech-tag {
+                padding: 3px 8px;
+                font-size: 0.7rem;
+            }
+            
+            .resume-sidebar, .resume-main {
+                padding: 15px 12px;
+            }
+            
+            .resume-section-title {
+                font-size: 1rem;
+            }
+            
+            .contact-item {
+                margin-bottom: 15px;
+            }
+        }
+        
+        /* Ensure all content is visible */
+        .visible {
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        /* Prevent horizontal scrolling */
+        body, html {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        /* Additional spacing for mobile */
+        .mobile-spacing {
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <a href="https://niyaz5.github.io" style="text-decoration: none;">
-                <h1>🖧 Muhammed Niyaz</h1>
-            </a>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
             <nav>
-                <ul>
+                <a href="#" class="logo">Muhammed<span>Niyaz</span></a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
             </nav>
-        </header>
-        <main>
-            <section id="about">
-                <h2>About Me</h2>
-                <p>I am a degree student passionate about ethical hacking and tech. My work includes tools like an IP tracker and password generator, know the languages like Bash, C, and Python. No formal certs yet — but real skill doesn’t always need one. I'm here to learn, hack, build, and defend.</p>
-            </section>
+        </div>
+    </header>
 
-            <section id="projects">
-                <h2>Projects</h2>
-                <ul>
-                    <li><a href="https://niyaz5.github.io/iptracker"><strong>IPTracker</strong></a>: Tool to track IP addresses.</li>
-                    <li><a href="https://niyaz5.github.io/password-generator"><strong>Password Generator</strong></a>: Create and check strength of secure passwords.</li>
-                    <li><a href="https://webchatapp-8uhm.onrender.com/"><strong>Online Chat</strong></a>: Simple real-time chat app.</li>
-                </ul>
-                <a href="/projects.html"><h3>More...</h3></a>
-            </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span>Muhammed Niyaz</span><br>Ethical Hacker & Security Enthusiast</h1>
+                <p>I'm a 2nd-year BCA student passionate about cybersecurity, network security, and ethical hacking. My mission is to secure the digital world through my efforts.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
 
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>Email: <a href="mailto:muhammedniyaz9388@gmail.com" id="emaiId">muhammedniyaz9388@gmail.com</a></p>
-                <a href="https://github.com/Niyaz5"><i class="fab fa-github"></i></a>
-                <a href="https://t.me/niyyaz5"><i class="fab fa-telegram"></i></a>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2025 Muhammed Niyaz | Hacked this page myself.</p>
-        </footer>
-    </div>
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Cybersecurity Enthusiast & Ethical Hacker</h3>
+                    <p>I'm currently pursuing my BCA degree while specializing in cybersecurity and network security. My journey into ethical hacking began with a curiosity about how systems can be secured against malicious attacks.</p>
+                    <p>I believe in using my skills to protect digital assets and educate others about cybersecurity best practices. My approach combines technical expertise with ethical principles to create secure digital environments.</p>
+                    <div class="skills">
+                        <span class="skill">Network Security</span>
+                        <span class="skill">Python</span>
+                        <span class="skill">C/C++</span>
+                        <span class="skill">HTML/CSS</span>
+                        <span class="skill">Linux Terminal</span>
+                        <span class="skill">Nmap</span>
+                        <span class="skill">Aircrack-ng</span>
+                        <span class="skill">Basic Networking</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Muhammed Niyaz">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Password Generator">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Secure Password Generator</h3>
+                        <p class="project-desc">A web-based application that generates strong, secure passwords and temporarily stores them using IP address tracking for enhanced security.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">IP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://niyaz5.github.io/password-generator/" class="btn btn-outline">View Project</a>
+                            <a href="https://github.com/niyaz5" class="btn">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://play-lh.googleusercontent.com/Yp5uZDAv8htZWprmMyUlZ8tCGbx1lestQsj77sVT_ofBJH0XGg6m1p6Awf42E_H4zng3" alt="IP Tracker">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">IP Tracker</h3>
+                        <p class="project-desc">A visually appealing web application that tracks IP addresses using API integration with a cinematic, engaging user interface.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">UI/UX Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://niyaz5.github.io/iptracker/" class="btn btn-outline">View Project</a>
+                            <a href="https://github.com/niyaz5" class="btn">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/bannerchat.png" alt="Encrypted Chat">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Encrypted Random Chat</h3>
+                        <p class="project-desc">A web-based encrypted chat application that enables random users to communicate securely with end-to-end encryption.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Html</span>
+                            <span class="tech-tag">Css</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">Encryption</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline">View Project</a>
+                            <a href="https://github.com/niyaz5" class="btn">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section - FIXED FOR MOBILE -->
+    <section id="resume">
+        <div class="container">
+            <h2 class="section-title">My Resume</h2>
+            <div class="resume-container">
+                <div class="resume-sidebar">
+                    <div class="resume-section">
+                        <h3 class="resume-section-title">Contact</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p>muhammedniyaz@proton.me</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p>Kannur, Kerala, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-section">
+                        <h3 class="resume-section-title">Skills</h3>
+                        <div class="skills">
+                            <span class="skill">Network Security</span>
+                            <span class="skill">Python</span>
+                            <span class="skill">C/C++</span>
+                            <span class="skill">HTML/CSS</span>
+                            <span class="skill">Linux Terminal</span>
+                            <span class="skill">Nmap</span>
+                            <span class="skill">Aircrack-ng</span>
+                            <span class="skill">Basic Networking</span>
+                        </div>
+                    </div>
+
+                    <div class="resume-section">
+                        <h3 class="resume-section-title">Interests</h3>
+                        <div class="education-item">
+                            <p class="item-title">Cybersecurity</p>
+                            <p class="item-subtitle">Ethical Hacking</p>
+                        </div>
+                        <div class="education-item">
+                            <p class="item-title">Network Security</p>
+                            <p class="item-subtitle">Penetration Testing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-main">
+                    <div class="resume-section">
+                        <h3 class="resume-section-title">Education</h3>
+                        <div class="education-item">
+                            <div class="item-header">
+                                <p class="item-title">Bachelor of Computer Applications (BCA)</p>
+                                <p class="item-date">2024 - present</p>
+                            </div>
+                            <p class="item-subtitle">Kannur University</p>
+                            <p class="item-desc">Currently in 2nd year, specializing in coding.</p>
+                        </div>
+                        <div class="education-item">
+                            <div class="item-header">
+                                <p class="item-title">Higher Secondary Certificate (+2)</p>
+                                <p class="item-date">2022 - 2024</p>
+                            </div>
+                            <p class="item-subtitle">Biology Science</p>
+                            <p class="item-desc">Completed BioScience with focus on computer fundamentals.</p>
+                        </div>
+                    </div>
+
+                    <div class="resume-section">
+                        <h3 class="resume-section-title">Projects</h3>
+                        <div class="experience-item">
+                            <div class="item-header">
+                                <p class="item-title">Secure Password Generator</p>
+                                <p class="item-date">2024</p>
+                            </div>
+                            <p class="item-desc">Web-based application that generates strong passwords and temporarily stores them using IP address tracking.</p>
+                        </div>
+                        <div class="experience-item">
+                            <div class="item-header">
+                                <p class="item-title">IP Tracker</p>
+                                <p class="item-date">2024</p>
+                            </div>
+                            <p class="item-desc">Visually appealing web application for IP tracking with API integration and cinematic UI.</p>
+                        </div>
+                        <div class="experience-item">
+                            <div class="item-header">
+                                <p class="item-title">Encrypted Random Chat</p>
+                                <p class="item-date">2024</p>
+                            </div>
+                            <p class="item-desc">Web-based encrypted chat application for secure random communication between users.</p>
+                        </div>
+                    </div>
+
+                    <div class="resume-section">
+                        <h3 class="resume-section-title">Career Objective</h3>
+                        <div class="experience-item">
+                            <p class="item-desc">Aspiring cybersecurity professional with a passion for ethical hacking and network security. Seeking to leverage my skills and knowledge to secure digital infrastructures and contribute to a safer online world. Committed to continuous learning and staying updated with the latest security trends and technologies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - FIXED FOR MOBILE -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>muhammedniyaz@proton.me</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Kannur, Kerala, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3>Education</h3>
+                            <p>Kannur University</p>
+                            <p>BCA 2nd Year</p>
+                        </div>
+                    </div>
+                </div>
+                 <form id="contact-form" action="https://formsubmit.co/ca99b24713c7f553dbde071c7783a3c3" method="POST">
+                 <input type="hidden" name="_next" value="https://niyaz5.github.io">
+                 <input type="hidden" name="_captcha" value="false">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" name="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" class="form-control" name="E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" name="Sub" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" class="form-control" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">Muhammed<span>Niyaz</span></div>
+                <div class="social-links">
+                    <a href="https://github.com/niyaz5" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/muhammad-niyaz-3b32b0306" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://t.me/niyyaz5" class="social-link"><i class="fab fa-telegram"></i></a>
+                    <a href="https://instagram.com/ni.yyaz" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Muhammed Niyaz. All Rights Reserved. | Securing the digital world through ethical hacking</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            // Change hamburger icon
+            if (navLinks.classList.contains('active')) {
+                hamburger.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Ensure all content is visible on load
+        window.addEventListener('load', function() {
+            document.body.classList.add('visible');
+        });
+    </script>
 </body>
-</html>
+                                </html>
