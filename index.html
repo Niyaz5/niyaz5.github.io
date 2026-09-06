@@ -884,6 +884,248 @@
         .mobile-spacing {
             margin-bottom: 20px;
         }
+
+        /* ===== Premium Visual Upgrade ===== */
+        :root {
+            --primary: #5a8cff;
+            --primary-dark: #3b6de2;
+            --secondary: #43d9bd;
+            --dark: #090b13;
+            --dark-light: #111827;
+            --light: #f4f7ff;
+            --gray: #a6b0cf;
+            --shadow: 0 12px 30px rgba(2, 8, 30, 0.35);
+            --shadow-lg: 0 26px 60px rgba(2, 8, 30, 0.5);
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 12% 20%, rgba(90, 140, 255, 0.28), transparent 42%),
+                radial-gradient(circle at 88% 4%, rgba(67, 217, 189, 0.16), transparent 38%),
+                linear-gradient(180deg, #060811 0%, #090b13 55%, #070910 100%);
+            color: var(--light);
+        }
+
+        section {
+            padding: 95px 0;
+        }
+
+        .section-surface {
+            position: relative;
+            z-index: 0;
+        }
+
+        .section-surface .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-surface::before {
+            content: '';
+            position: absolute;
+            inset: 20px;
+            border-radius: 28px;
+            background: linear-gradient(160deg, rgba(19, 27, 45, 0.88), rgba(11, 17, 32, 0.7));
+            border: 1px solid rgba(133, 165, 255, 0.18);
+            box-shadow: var(--shadow);
+            z-index: -1;
+        }
+
+        .section-surface-alt::before {
+            background: linear-gradient(160deg, rgba(13, 22, 38, 0.9), rgba(9, 16, 30, 0.76));
+            border-color: rgba(80, 227, 194, 0.2);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 2.7vw, 2.6rem);
+            letter-spacing: -0.02em;
+            margin-bottom: 40px;
+        }
+
+        .section-title::after {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            width: 90px;
+            height: 5px;
+        }
+
+        header {
+            background: rgba(8, 12, 23, 0.82);
+            border-bottom: 1px solid rgba(133, 165, 255, 0.15);
+        }
+
+        .logo {
+            letter-spacing: 0.02em;
+        }
+
+        .hero {
+            min-height: 100vh;
+            padding: 140px 0 70px;
+        }
+
+        .hero-bg {
+            background: radial-gradient(circle at 20% 10%, rgba(90, 140, 255, 0.33), transparent 45%),
+                        radial-gradient(circle at 75% 55%, rgba(67, 217, 189, 0.18), transparent 40%),
+                        linear-gradient(140deg, rgba(9, 15, 30, 0.76), rgba(6, 10, 20, 0.94));
+        }
+
+        .hero-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+            padding: 8px 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(145, 173, 255, 0.35);
+            background: rgba(18, 30, 54, 0.55);
+            color: #d4e1ff;
+            font-size: 0.9rem;
+            font-weight: 500;
+            backdrop-filter: blur(8px);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.6rem);
+            margin-bottom: 18px;
+            max-width: 900px;
+        }
+
+        .hero p {
+            color: #c1cbed;
+            max-width: 760px;
+            font-size: 1.08rem;
+        }
+
+        .btn {
+            border-radius: 12px;
+            padding: 12px 26px;
+            background: linear-gradient(135deg, var(--primary), #6ea5ff);
+            box-shadow: 0 10px 24px rgba(64, 120, 255, 0.34);
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #4d7eff, #6098ff);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(145, 173, 255, 0.42);
+            color: #d8e5ff;
+            background: rgba(17, 30, 52, 0.45);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: rgba(69, 121, 255, 0.2);
+            color: var(--light);
+            border-color: rgba(145, 173, 255, 0.7);
+        }
+
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 30px;
+            max-width: 900px;
+        }
+
+        .metric-card {
+            background: rgba(17, 29, 51, 0.58);
+            border: 1px solid rgba(148, 174, 255, 0.22);
+            border-radius: 14px;
+            padding: 16px 18px;
+            backdrop-filter: blur(8px);
+        }
+
+        .metric-card strong {
+            display: block;
+            font-size: 1.25rem;
+            color: #e4ecff;
+        }
+
+        .metric-card span {
+            color: #a6b6df;
+            font-size: 0.9rem;
+        }
+
+        .about-image, .project-card, .resume-sidebar, .resume-main, .form-control, .contact-icon {
+            border: 1px solid rgba(147, 174, 255, 0.15);
+        }
+
+        .about-image, .project-card, .resume-sidebar, .resume-main {
+            border-radius: 16px;
+            background: linear-gradient(180deg, rgba(16, 24, 43, 0.9), rgba(12, 20, 37, 0.84));
+            box-shadow: var(--shadow);
+        }
+
+        .skill {
+            background: rgba(85, 134, 255, 0.14);
+            border: 1px solid rgba(132, 166, 255, 0.28);
+            color: #d7e5ff;
+        }
+
+        .project-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(6, 10, 19, 0.7));
+        }
+
+        .tech-tag {
+            background: rgba(80, 227, 194, 0.12);
+            color: #7ff0d7;
+            border: 1px solid rgba(80, 227, 194, 0.3);
+        }
+
+        .form-control {
+            background: rgba(15, 24, 43, 0.68);
+            border-radius: 10px;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 0 4px rgba(90, 140, 255, 0.18);
+        }
+
+        footer {
+            background: linear-gradient(180deg, rgba(12, 19, 34, 0.9), rgba(9, 14, 27, 0.95));
+            border-top: 1px solid rgba(133, 165, 255, 0.2);
+        }
+
+        @media (max-width: 992px) {
+            .hero-metrics {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .section-surface::before {
+                inset: 12px;
+                border-radius: 22px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: 120px;
+            }
+
+            .hero-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .section-surface::before {
+                inset: 8px;
+                border-radius: 18px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-chip {
+                font-size: 0.82rem;
+            }
+
+            section {
+                padding: 72px 0;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -911,11 +1153,26 @@
         <div class="hero-bg"></div>
         <div class="container">
             <div class="hero-content">
+                <span class="hero-chip"><i class="fas fa-shield-alt"></i> Cybersecurity Portfolio</span>
                 <h1>Hi, I'm <span>Muhammed Niyaz</span><br>Ethical Hacker & Security Enthusiast</h1>
-                <p>I'm a 2nd-year BCA student passionate about cybersecurity, network security, and ethical hacking. My mission is to secure the digital world through my efforts.</p>
+                <p>I'm a BCA student focused on cybersecurity, network defense, and ethical hacking, building practical tools and secure-by-design solutions for the modern web.</p>
                 <div class="hero-btns">
                     <a href="#projects" class="btn">View My Work</a>
                     <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+                <div class="hero-metrics">
+                    <div class="metric-card">
+                        <strong>3+</strong>
+                        <span>Security Projects</span>
+                    </div>
+                    <div class="metric-card">
+                        <strong>2024</strong>
+                        <span>Started Cyber Journey</span>
+                    </div>
+                    <div class="metric-card">
+                        <strong>Student</strong>
+                        <span>BCA • Kannur University</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -925,7 +1182,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="section-surface">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
@@ -952,7 +1209,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="section-surface section-surface-alt">
         <div class="container">
             <h2 class="section-title">My Projects</h2>
             <div class="projects-grid">
@@ -1023,7 +1280,7 @@
     </section>
 
     <!-- Resume Section - FIXED FOR MOBILE -->
-    <section id="resume">
+    <section id="resume" class="section-surface">
         <div class="container">
             <h2 class="section-title">My Resume</h2>
             <div class="resume-container">
@@ -1133,7 +1390,7 @@
     </section>
 
     <!-- Contact Section - FIXED FOR MOBILE -->
-    <section id="contact">
+    <section id="contact" class="section-surface section-surface-alt">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
@@ -1167,7 +1424,7 @@
                         </div>
                     </div>
                 </div>
-                 <form id="contact-form" action="https://formsubmit.co/ca99b24713c7f553dbde071c7783a3c3" method="POST">
+                 <form id="contact-form" class="contact-form" action="https://formsubmit.co/ca99b24713c7f553dbde071c7783a3c3" method="POST">
                  <input type="hidden" name="_next" value="https://niyaz5.github.io">
                  <input type="hidden" name="_captcha" value="false">
                     <div class="form-group">
